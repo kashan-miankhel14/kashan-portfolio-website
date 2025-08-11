@@ -1,0 +1,158 @@
+PRD: Kashan Saeed — Personal Portfolio Website
+1. Project Overview
+A modern, responsive, personal portfolio website to showcase:
+
+Your professional profile
+
+Skills in web development & Windows application development
+
+Selected projects
+
+Client testimonials (placeholder)
+
+Contact & hire section
+
+Goals:
+
+Build trust instantly with potential clients on Freelancer
+
+Highlight skills & real projects with proof
+
+Provide a single link to send to clients instead of long explanations
+
+2. Target Audience
+Potential Freelancer clients
+
+Startups or small businesses looking for developers
+
+Individuals seeking a personal software solution
+
+3. Tech Stack
+Frontend: React.js + TailwindCSS (lightweight, modern look)
+
+Deployment (Free): Vercel (fast, free hosting with custom domain option)
+
+Contact Form Backend: Formspree (free form submission without backend)
+
+Images: Pexels/Unsplash (free)
+
+Icons: Heroicons / Font Awesome
+
+4. Pages & Sections
+4.1. Home (Landing)
+Hero section: “Hi, I’m Kashan Saeed – Software Engineer & Developer”
+
+Short tagline: “Building fast, clean, and powerful applications for the web and desktop.”
+
+Call to Action: “View My Work” & “Hire Me”
+
+4.2. About Me
+From your saved info:
+
+Name: Kashan Saeed
+
+Age: 22
+
+Location: Peshawar, Pakistan
+
+Education: Final year in Software Engineering
+
+Strengths:
+
+Fast learner, adapts quickly
+
+Multi-dimensional intelligence
+
+Skilled in web & desktop app development
+
+Strong problem-solving mindset
+
+Bio (Short Paragraph):
+"I’m a passionate software engineer with experience building both web applications and Windows desktop solutions. I focus on delivering clean, efficient, and user-friendly software that solves real-world problems. My strength lies in rapid learning, deep technical understanding, and a commitment to delivering beyond expectations."
+
+4.3. Skills
+Languages: JavaScript, Python, C, C++, C#, Rust (basic)
+
+Web Technologies: HTML, CSS, React.js, Node.js, Express.js, MongoDB
+
+Windows Development: Electron.js, Tauri (Rust), WinForms (C#)
+
+Tools: Git, VS Code, Postman, Figma
+
+Soft Skills: Problem-solving, client communication, adaptability
+
+4.4. Projects
+We’ll include at least 4 real projects — even if some are small — with screenshots + short description + tech stack used.
+Suggested for you:
+
+Windows App: Note Manager (Electron.js / Tauri)
+
+Full-Stack Web App: Task Tracker (React + Node + MongoDB)
+
+Responsive Portfolio Website (React + Tailwind)
+
+Landing Page for Business (HTML + CSS + JS)
+
+Each Project Card:
+
+Title
+
+2–3 screenshots
+
+Short description (problem solved)
+
+Tech stack
+
+GitHub link (if public)
+
+Live demo link (if deployed)
+
+4.5. Testimonials
+Placeholder reviews like:
+"Kashan delivered my website ahead of schedule and with great quality!" — Client from Freelancer
+
+4.6. Contact
+Email link
+
+Freelancer profile link
+
+Contact form (via Formspree)
+
+Socials (LinkedIn, GitHub)
+
+5. Colors & Typography
+Primary: #2563EB (Blue 600)
+
+Accent: #F59E0B (Amber 500)
+
+Background: #F9FAFB (Light Gray)
+
+Text: #111827 (Black) / #6B7280 (Gray)
+
+Font: Poppins for headings, Inter for body
+
+6. Deployment
+Host on Vercel for free
+
+Free domain from Freenom or use yourname.vercel.app
+
+Optimize images for faster loading
+
+7. Freelancer Profile Boost
+Alongside your portfolio website:
+
+Profile Picture: Professional, clean, front-facing
+
+Title: “Full Stack Web & Desktop Application Developer”
+
+Description: Include your bio from About Me section
+
+Portfolio Link: Put your deployed portfolio URL
+
+Portfolio Items on Freelancer:
+
+Add screenshots of projects from your site
+
+Upload short demo videos (screen recordings)
+
+Mention tech stacks clearly

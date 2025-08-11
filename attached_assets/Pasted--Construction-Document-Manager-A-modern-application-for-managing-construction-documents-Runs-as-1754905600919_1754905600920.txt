@@ -1,0 +1,82 @@
+# Construction Document Manager
+
+A modern application for managing construction documents. Runs as a web app (Next.js) and can be packaged as a Windows desktop app via a wrapper (Electron or Tauri).
+
+## Tech Stack
+- Next.js 15 (App Router), React 19, TypeScript
+- Tailwind CSS (+ tailwindcss-animate)
+- UI: Radix UI, lucide-react, geist, cmdk, sonner
+- Forms/Validation: react-hook-form, zod
+- Utilities: date-fns, recharts, html2canvas, jsPDF, xlsx
+
+See `package.json` for the full list.
+
+## Requirements
+- Node.js >= 18.18 (LTS 18/20 recommended)
+- Package manager: pnpm (recommended) or npm
+
+## Install
+```bash
+# pnpm
+pnpm install
+# or npm
+npm install
+```
+
+## Run (Web)
+```bash
+# dev (http://localhost:3000)
+pnpm dev   # or: npm run dev
+
+# production
+pnpm build # or: npm run build
+pnpm start # or: npm run start
+```
+
+## Environment Variables
+Create `.env.local` in the project root if needed, e.g.
+```env
+NEXT_PUBLIC_API_BASE_URL=
+SECRET_API_KEY=
+```
+Restart the dev server after changes.
+
+## Project Structure
+- `app/` routes, pages, layouts (Next.js App Router)
+- `components/` shared UI components
+- `hooks/`, `lib/`, `public/`, `styles/`, `types/`
+- `tailwind.config.ts`, `next.config.mjs`
+
+## Package as a Windows Desktop App (Optional)
+This repo is web-first. To ship a Windows app, wrap the web app.
+
+### Option A: Electron (quick start)
+1) Dev deps:
+```bash
+pnpm add -D electron electron-builder concurrently wait-on cross-env
+```
+2) Create `electron/main.cjs`:
+```js
+const { app, BrowserWindow } = require('electron');
+const create = () => { const w=new BrowserWindow({width:1200,height:800}); w.loadURL(process.env.APP_URL||'http://localhost:3000'); };
+app.whenReady().then(create); app.on('window-all-closed',()=>{ if(process.platform!=='darwin') app.quit(); });
+```
+3) Add scripts in `package.json`:
+```json
+{
+  "scripts": {
+    "electron:dev": "cross-env APP_URL=http://localhost:3000 concurrently \"next dev\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "next build && electron-builder"
+  }
+}
+```
+4) Configure `electron-builder` to produce a Windows installer (`.exe`/`.msi`).
+
+### Option B: Tauri (lightweight)
+1) Install Rust + Tauri CLI (see tauri.app docs).
+2) Initialize Tauri in this project and set the dev URL to `http://localhost:3000`.
+3) Build the Next app, then `tauri build` to get a Windows bundle.
+
+## Notes
+- `next.config.mjs` ignores ESLint/TS build errors and uses unoptimized images (good for templates/prototypes).
+- Prefer pnpm to match the included `pnpm-lock.yaml`.

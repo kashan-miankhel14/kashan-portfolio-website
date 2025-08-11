@@ -1,0 +1,137 @@
+Academic Timetable Scheduler 📚
+A comprehensive web-based academic timetable scheduling system built with Python and Streamlit. This application uses advanced algorithms including Constraint Satisfaction Problem (CSP) and Genetic Algorithm to generate optimal class schedules for educational institutions.
+
+🌟 Features
+Core Functionality
+Intelligent Scheduling: Two powerful algorithms (CSP & Genetic) for optimal timetable generation
+Multi-View Support: General, Teacher-specific, and Student-specific schedule views
+Conflict Resolution: Automatic detection and resolution of scheduling conflicts
+PDF Export: Generate professional PDF reports for different views
+Excel Integration: Bulk data import/export with Excel templates
+Data Management
+Teacher Management: Add, edit, and manage teacher profiles
+Course Management: Create and assign courses to teachers
+Student Management: Manage student enrollments and course assignments
+Room Configuration: Flexible room setup and capacity management
+Advanced Features
+Institution Settings: Customizable academic hours, break times, and preferences
+Lunch Hour Avoidance: Configurable lunch break scheduling
+Workload Balancing: Teacher workload distribution and consecutive class limits
+Student Conflict Detection: Prevents scheduling conflicts for enrolled students
+Sample Data Generation: Built-in utilities for testing with realistic data
+🚀 Quick Start
+Prerequisites
+Python 3.8 or higher
+pip package manager
+Installation
+Clone the repository
+
+git clone https://github.com/yourusername/academic-timetable-scheduler.git
+cd academic-timetable-scheduler
+Install dependencies
+
+pip install -r requirements.txt
+Run the application
+
+streamlit run app.py
+Access the application Open your browser and navigate to http://localhost:8501
+
+📋 Usage Guide
+Getting Started
+Configure Institution Settings: Set up your institution's basic information, academic hours, and preferences
+Add Sample Data: Use the Utilities section to generate sample data for testing
+Manage Data: Add teachers, courses, and students through the Data Management section
+Generate Schedule: Use either CSP or Genetic Algorithm to create your timetable
+Export Results: Download PDF reports for different stakeholders
+Data Import
+The system supports Excel-based bulk data import:
+
+Download the Excel template from the Data Management section
+Fill in your institution's data (teachers, courses, students, enrollments)
+Upload the completed file for automatic processing
+Algorithm Selection
+CSP (Constraint Satisfaction): Fast, rule-based scheduling ideal for smaller datasets
+Genetic Algorithm: Advanced optimization for complex schedules with better conflict resolution
+🏗️ Architecture
+Core Components
+app.py: Main Streamlit application with UI components
+scheduler.py: CSP-based scheduling algorithm implementation
+genetic_scheduler.py: Genetic algorithm for advanced optimization
+database.py: SQLAlchemy models and database management
+models.py: Data classes for core entities (Teacher, Course, Student, etc.)
+config.py: Configuration management system
+pdf_generator.py: PDF report generation utilities
+excel_processor.py: Excel import/export functionality
+Database Schema
+Teachers: Store teacher information and course assignments
+Courses: Course details with teacher associations
+Students: Student profiles with course enrollments
+Schedules: Generated timetable entries
+Institution Settings: Configurable system parameters
+🔧 Configuration
+The system uses a flexible configuration system supporting:
+
+Institution-specific settings (name, address, academic year)
+Academic time preferences (start/end hours, class duration, breaks)
+Room management (types, capacities, availability)
+Scheduling preferences (lunch hours, consecutive class limits)
+Algorithm parameters (population size, mutation rates)
+📊 Algorithms
+Constraint Satisfaction Problem (CSP)
+Rule-based approach with hard and soft constraints
+Fast execution suitable for real-time scheduling
+Prioritizes courses by enrollment and teacher workload
+Implements backtracking for conflict resolution
+Genetic Algorithm
+Population-based evolutionary optimization
+Multiple initialization strategies for diverse solutions
+Adaptive mutation rates based on solution quality
+Multi-objective fitness function considering various constraints
+🛠️ Development
+Project Structure
+academic-timetable-scheduler/
+├── app.py                 # Main application
+├── scheduler.py           # CSP algorithm
+├── genetic_scheduler.py   # Genetic algorithm
+├── database.py           # Database models
+├── models.py             # Data classes
+├── config.py             # Configuration system
+├── pdf_generator.py      # PDF utilities
+├── excel_processor.py    # Excel processing
+├── utils.py              # Helper functions
+├── institution_settings.py # Settings UI
+├── requirements.txt      # Dependencies
+└── README.md            # Documentation
+Key Dependencies
+Streamlit: Web application framework
+SQLAlchemy: Database ORM
+Pandas: Data manipulation
+ReportLab: PDF generation
+OpenPyXL: Excel processing
+NumPy: Numerical computations
+🤝 Contributing
+Fork the repository
+Create a feature branch (git checkout -b feature/amazing-feature)
+Commit your changes (git commit -m 'Add amazing feature')
+Push to the branch (git push origin feature/amazing-feature)
+Open a Pull Request
+📝 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🎯 Use Cases
+Universities: Complex multi-department scheduling
+Colleges: Department-wise timetable management
+Schools: Class and teacher schedule coordination
+Training Centers: Course and instructor scheduling
+Conference Planning: Session and speaker management
+🔮 Future Enhancements
+Multi-semester planning support
+Resource booking integration (labs, equipment)
+Mobile application development
+Advanced analytics and reporting
+Integration with Learning Management Systems
+Real-time schedule updates and notifications
+📞 Support
+For support, feature requests, or bug reports, please open an issue on GitHub or contact the development team.
+
+Built with ❤️ for educational institutions worldwide

@@ -1,0 +1,209 @@
+Solar System Calculator
+A comprehensive full-stack web application for calculating solar power system requirements and load calculations. Built with React frontend and Django REST API backend, featuring real-time calculations, database storage, and responsive design for optimal solar energy planning.
+
+Solar System Calculator React Django PostgreSQL
+
+✨ Features
+🔌 Load Calculator: Calculate total power consumption based on appliances
+☀️ Solar System Calculator: Determine solar panel, battery, and inverter requirements
+💾 Database Storage: Save calculations for future reference with PostgreSQL/SQLite support
+👨‍💼 Admin Interface: Comprehensive management of appliances and calculation history
+🔄 REST API: Full CRUD operations for all data models
+📱 Responsive Design: Optimized for desktop and mobile devices
+🐳 Docker Support: Easy deployment with Docker containers
+🛠️ Tech Stack
+Frontend
+React 18.3.1 - Modern UI library
+React Router DOM 6.26.2 - Client-side routing
+Bootstrap 5.3.3 - Responsive CSS framework
+JavaScript ES6+ - Modern JavaScript features
+Backend
+Django 5.1.0 - Python web framework
+Django REST Framework 3.15.2 - API development
+PostgreSQL - Production database (with psycopg2-binary)
+SQLite - Development database fallback
+Python 3.8+ - Backend programming language
+📁 Project Structure
+Solar-System-main/
+├── 🖥️ backend/                    # Django REST API
+│   ├── backend/                   # Project settings
+│   │   ├── settings.py           # Configuration with PostgreSQL
+│   │   ├── urls.py               # URL routing
+│   │   └── wsgi.py               # WSGI application
+│   ├── calculator/               # Main calculation app
+│   │   ├── models.py             # Database models
+│   │   ├── views.py              # API endpoints
+│   │   ├── serializers.py        # Data serialization
+│   │   ├── solar_calculations.py # Solar calculation logic
+│   │   └── admin.py              # Admin interface
+│   ├── requirements.txt          # Python dependencies
+│   ├── .env.example             # Environment template
+│   └── manage.py                # Django CLI
+├── 🌐 Solar-system/              # React frontend
+│   ├── src/                     # Source code
+│   │   ├── components/          # React components
+│   │   ├── pages/               # Page components
+│   │   └── App.js               # Main application
+│   ├── public/                  # Static assets
+│   ├── package.json             # Node dependencies
+│   └── Dockerfile               # Frontend container
+├── 🐳 docker-compose.yml         # Multi-container setup
+├── 📋 SETUP_GUIDE.md             # Detailed setup instructions
+└── 🚀 start.bat / start.sh       # Quick start scripts
+🚀 Quick Start
+Option 1: Using Start Scripts (Recommended)
+Windows:
+
+start.bat
+macOS/Linux:
+
+chmod +x start.sh
+./start.sh
+Option 2: Docker Deployment
+docker-compose up --build
+Access the application:
+
+Frontend: http://localhost:3000
+Backend API: http://localhost:8000
+Admin Panel: http://localhost:8000/admin
+📖 Manual Installation
+Prerequisites
+Python 3.8+
+Node.js 14+
+PostgreSQL 12+ (optional)
+Backend Setup
+Navigate and setup virtual environment:
+
+cd backend
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
+Install dependencies and setup database:
+
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser  # Optional
+python manage.py runserver
+Frontend Setup
+Install and start React app:
+cd Solar-system
+npm install
+npm start
+🗄️ Database Configuration
+SQLite (Default - Development)
+No additional setup required. Database file created automatically.
+
+PostgreSQL (Production)
+Create database:
+
+CREATE DATABASE solar_system_db;
+CREATE USER solar_user WITH PASSWORD 'your_password';
+GRANT ALL PRIVILEGES ON DATABASE solar_system_db TO solar_user;
+Configure environment (.env):
+
+DATABASE_URL=postgresql://solar_user:your_password@localhost:5432/solar_system_db
+DB_NAME=solar_system_db
+DB_USER=solar_user
+DB_PASSWORD=your_password
+DB_HOST=localhost
+DB_PORT=5432
+🔌 API Endpoints
+Core Calculations
+Method	Endpoint	Description
+POST	/api/calculate_load/	Calculate total electrical load
+POST	/api/calculate_solar_setup/	Calculate solar system requirements
+Data Management
+Method	Endpoint	Description
+GET/POST	/api/appliances/	List/Create appliances
+GET/PUT/DELETE	/api/appliances/{id}/	Manage specific appliance
+GET/POST	/api/solar-calculations/	List/Create solar calculations
+GET/PUT/DELETE	/api/solar-calculations/{id}/	Manage solar calculations
+GET/POST	/api/load-calculations/	List/Create load calculations
+GET/PUT/DELETE	/api/load-calculations/{id}/	Manage load calculations
+💡 Usage Guide
+Load Calculator
+Navigate to Load Calculator page
+Add appliances with power ratings and quantities
+Specify daily usage hours for each appliance
+Click "Calculate Total Load"
+View detailed breakdown and total consumption
+Save results to database for future reference
+Solar System Calculator
+Go to Solar System Calculator
+Enter total power consumption (from load calculator)
+Specify backup time requirements (hours)
+Select battery type (Lead Acid/Lithium)
+Choose solar panel specifications
+Click "Calculate Solar Setup"
+Review component recommendations and costs
+🔧 Development
+Adding New Features
+Backend (Django):
+
+# 1. Add models in calculator/models.py
+# 2. Create serializers in calculator/serializers.py
+# 3. Add views in calculator/views.py
+# 4. Update URLs in calculator/urls.py
+Frontend (React):
+
+// 1. Create components in src/components/
+// 2. Add pages in src/pages/
+// 3. Update routing in src/App.js
+// 4. Integrate with API endpoints
+Running Tests
+# Backend tests
+cd backend
+python manage.py test
+
+# Frontend tests
+cd Solar-system
+npm test
+🌍 Environment Variables
+Variable	Description	Default
+SECRET_KEY	Django secret key	Auto-generated
+DEBUG	Debug mode	True
+ALLOWED_HOSTS	Allowed hosts	localhost,127.0.0.1
+DATABASE_URL	PostgreSQL connection	Empty (uses SQLite)
+DB_NAME	Database name	solar_system_db
+DB_USER	Database user	postgres
+DB_PASSWORD	Database password	Empty
+DB_HOST	Database host	localhost
+DB_PORT	Database port	5432
+🚀 Deployment
+Production Checklist
+ Set DEBUG=False
+ Configure ALLOWED_HOSTS
+ Use PostgreSQL database
+ Set up static file serving
+ Configure environment variables
+ Build React app (npm run build)
+ Set up reverse proxy (Nginx)
+ Configure SSL certificates
+Docker Production
+# Build and deploy
+docker-compose -f docker-compose.prod.yml up --build -d
+
+# Scale services
+docker-compose -f docker-compose.prod.yml up --scale web=3
+🤝 Contributing
+Fork the repository
+Create a feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🆘 Support
+📧 Email: kashan.miankhel@gmail.com
+🐛 Issues: GitHub Issues
+📖 Documentation: Setup Guide
+🙏 Acknowledgments
+Solar energy calculation formulas and best practices
+Open source community for amazing tools and libraries
+Contributors who help improve this project

@@ -1,0 +1,141 @@
+Mental Health Peer Support Platform
+A secure, anonymous peer-to-peer mental health support platform that connects individuals facing similar challenges. Built with PHP and MySQL, featuring encrypted messaging, mood tracking, and professional crisis resources.
+
+🌟 Features
+Core Functionality
+Anonymous User Profiles - Create profiles without revealing personal identity
+Smart Peer Matching - Algorithm-based matching with users facing similar challenges
+Secure Messaging - End-to-end encrypted chat system between matched peers
+Group Support - Join or create support groups for specific mental health topics
+Crisis Resources - Immediate access to professional emergency mental health services
+Personal Wellness Tools
+Mood Tracking - Daily mood logging with triggers and coping strategies
+Private Journal - Encrypted personal journal entries
+Goal Setting - Set and track mental health goals with progress monitoring
+Progress Analytics - Visual representation of mood patterns and goal achievements
+Safety & Moderation
+AI Chatbot Support - 24/7 automated support and crisis detection
+Admin Dashboard - Comprehensive moderation tools and user management
+Crisis Alert System - Automatic detection and escalation of emergency situations
+Peer Rating System - Community-driven trust and safety mechanisms
+🚀 Quick Start
+Prerequisites
+PHP 7.4 or higher
+MySQL 5.7 or higher
+Web server (Apache/Nginx)
+Modern web browser
+Installation
+Clone the repository
+
+git clone https://github.com/yourusername/mental-health-peer-support.git
+cd mental-health-peer-support
+Database Setup
+
+# Create database
+mysql -u root -p -e "CREATE DATABASE peer_support_platform;"
+
+# Import schema
+mysql -u root -p peer_support_platform < sql/db_schema.sql
+
+# Add admin user (optional)
+mysql -u root -p peer_support_platform < sql/add_admin.sql
+Configure Database Connection
+
+// Edit src/config.php
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'peer_support_platform');
+define('DB_USER', 'your_username');
+define('DB_PASS', 'your_password');
+Set Permissions
+
+chmod 755 -R .
+chmod 644 src/config.php
+Launch Application
+
+Start your web server
+Navigate to http://localhost/your-project-folder
+Register a new account or use admin login
+📁 Project Structure
+├── admin/                  # Admin panel and moderation tools
+├── css/                   # Stylesheets and UI components
+├── js/                    # JavaScript functionality
+├── pages/                 # Static pages and documentation
+├── sql/                   # Database schemas and migrations
+├── src/                   # Core PHP backend logic
+├── docs/                  # Project documentation
+├── index.php              # Main landing page
+├── dashboard.php          # User dashboard
+├── chat.php              # Peer messaging interface
+├── journal.php           # Personal journal feature
+├── groups.php            # Group support functionality
+└── emergency.php         # Crisis resources page
+🛡️ Security Features
+Data Encryption - All sensitive data encrypted at rest
+Anonymous Architecture - No personal identifying information required
+Secure Headers - CSP, XSS protection, and frame options
+Input Validation - Comprehensive sanitization and validation
+Session Management - Secure session handling and timeout
+Crisis Detection - AI-powered identification of emergency situations
+🔧 Configuration
+Environment Variables
+Create a .env file for production deployments:
+
+DB_HOST=your_database_host
+DB_NAME=peer_support_platform
+DB_USER=your_database_user
+DB_PASS=your_secure_password
+ENCRYPTION_KEY=your_32_character_encryption_key
+Admin Access
+Default admin credentials (change immediately):
+
+Username: admin
+Password: admin123
+Access admin panel at: /admin/admin.php
+
+🤝 Contributing
+We welcome contributions to improve mental health support accessibility!
+
+Fork the repository
+Create a feature branch (git checkout -b feature/amazing-feature)
+Commit your changes (git commit -m 'Add amazing feature')
+Push to the branch (git push origin feature/amazing-feature)
+Open a Pull Request
+Development Guidelines
+Follow PSR-12 coding standards
+Write comprehensive tests for new features
+Update documentation for API changes
+Ensure security best practices are maintained
+📊 Database Schema
+The platform uses a comprehensive MySQL schema including:
+
+User management and anonymous profiles
+Mental health challenge categorization
+Peer matching and messaging systems
+Mood tracking and journal entries
+Group support functionality
+Crisis alert and moderation systems
+See sql/db_schema.sql for complete database structure.
+
+🆘 Crisis Resources
+This platform includes immediate access to professional mental health resources:
+
+National Suicide Prevention Lifeline
+Crisis Text Line
+International crisis hotlines
+Local emergency services integration
+Important: This platform supplements but does not replace professional mental health care.
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🙏 Acknowledgments
+Mental health professionals who provided guidance
+Open source community for security best practices
+Beta testers who provided valuable feedback
+Crisis intervention specialists for resource compilation
+📞 Support
+Documentation: Check the /docs folder
+Issues: Report bugs via GitHub Issues
+Security: Email security@yourplatform.com for vulnerabilities
+General: Contact support@yourplatform.com
+Disclaimer: This platform is designed to provide peer support and should not be used as a substitute for professional mental health treatment. If you are experiencing a mental health emergency, please contact your local emergency services immediately.
