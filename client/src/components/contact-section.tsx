@@ -140,7 +140,7 @@ export default function ContactSection() {
               <h4 className="font-semibold text-gray-900 mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://github.com/kashansaeed"
+                  href="https://github.com/kashan-miankhel14"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-900 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors"
@@ -149,7 +149,7 @@ export default function ContactSection() {
                   <i className="fab fa-github text-xl"></i>
                 </a>
                 <a 
-                  href="https://linkedin.com/in/kashan-saeed-a5b2a6272"
+                  href="https://www.linkedin.com/in/kashan-saeed-942548375"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"

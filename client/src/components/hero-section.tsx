@@ -45,7 +45,7 @@ export default function HeroSection() {
             {/* Social Links */}
             <div className="flex space-x-6 pt-4">
               <a 
-                href="https://github.com/kashansaeed" 
+                href="https://github.com/kashan-miankhel14" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-blue-200 hover:text-white transition-colors"
@@ -54,7 +54,7 @@ export default function HeroSection() {
                 <i className="fab fa-github text-2xl"></i>
               </a>
               <a 
-                href="https://linkedin.com/in/kashan-saeed-a5b2a6272" 
+                href="https://www.linkedin.com/in/kashan-saeed-942548375" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-blue-200 hover:text-white transition-colors"

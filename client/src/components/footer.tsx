@@ -72,7 +72,7 @@ export default function Footer() {
                 <i className="fab fa-github mr-3"></i>GitHub
               </a>
               <a 
-                href="https://linkedin.com/in/kashan-saeed-a5b2a6272"
+                href="https://www.linkedin.com/in/kashan-saeed-942548375"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-400 hover:text-white transition-colors"
