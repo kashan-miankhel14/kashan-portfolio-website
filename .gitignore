@@ -4,3 +4,14 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Replit files
+.replit
+replit.md
+.local/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
